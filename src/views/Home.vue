@@ -2,10 +2,10 @@
   <div class="home">
     <div class="home-items">
       <ul>
-        <li class="home-item">
-          <a target="_blank" href="/tulu/code/ppt/">
-            <h2 class="name">旋转的粒子特效</h2>
-            <p class="desc">旋转的粒子特效描述</p>
+        <li v-for="item in ListItems" :key="item.link" class="home-item">
+          <a target="_blank" :href="item.link">
+            <h2 class="name">{{ item.name }}</h2>
+            <p class="desc">{{ item.desc }}</p>
           </a>
         </li>
       </ul>
@@ -14,8 +14,15 @@
 </template>
 
 <script>
+import ListItems from '@/mock/list' 
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  data() {
+    return {
+      ListItems
+    }
+  }
 }
 </script>
 
