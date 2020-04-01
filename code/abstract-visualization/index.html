@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>粒子烟花发射器</title>
+    <title>抽象油画可视化</title>
     <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
+      body {
+        background: #000;
+        overflow: hidden;
       }
 
       canvas {
         display: block;
+        left: 50%;
+        margin: -200px 0 0 -200px;
+        position: absolute;
+        top: 50%;
       }
     </style>
   </head>
   <body>
-    <canvas></canvas>
-    <script src="./index.js"></script>
+    <canvas id="canvas" width="400" height="400"></canvas>
   </body>
 </html>

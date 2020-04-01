@@ -9,6 +9,16 @@
         "name": "Julius Horn",
         "homePage": "https://codepen.io/Supercopra"
       }
+    },
+    {
+      "name": "抽象油画可视化",
+      "tags": ["canvas", "点与线段"],
+      "link": "/code/abstract-visualization/",
+      "from": "https://codepen.io/jackrugile/pen/ohFbx",
+      "author": {
+        "name": "Jack Rugile",
+        "homePage": "https://codepen.io/jackrugile"
+      }
     }
   ]
 }
