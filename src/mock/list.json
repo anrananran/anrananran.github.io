@@ -1,9 +1,14 @@
 {
   "items": [
     {
-      "name": "PPT模板",
-      "desc": "PPT模板",
-      "link": "/code/ppt/"
+      "name": "粒子烟花发射器",
+      "tags": ["canvas", "粒子"],
+      "link": "/code/fireworks/",
+      "from": "https://codepen.io/Supercopra/pen/JBwgzJ",
+      "author": {
+        "name": "Julius Horn",
+        "homePage": "https://codepen.io/Supercopra"
+      }
     }
   ]
 }
