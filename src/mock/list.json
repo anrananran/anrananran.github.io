@@ -1,5 +1,9 @@
 {
-  "name": "PPT模板",
-  "desc": "PPT模板",
-  "link": "/code/ppt/"
+  "items": [
+    {
+      "name": "PPT模板",
+      "desc": "PPT模板",
+      "link": "/code/ppt/"
+    }
+  ]
 }

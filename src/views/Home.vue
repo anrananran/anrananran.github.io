@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home-items">
       <ul>
-        <li v-for="item in ListItems" :key="item.link" class="home-item">
+        <li v-for="item in items" :key="item.link" class="home-item">
           <a target="_blank" :href="item.link">
             <h2 class="name">{{ item.name }}</h2>
             <p class="desc">{{ item.desc }}</p>
@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import ListItems from '@/mock/list' 
+import { items } from '@/mock/list' 
 
 export default {
   name: 'Home',
   data() {
     return {
-      ListItems
+      items
     }
   }
 }
