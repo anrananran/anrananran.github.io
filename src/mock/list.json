@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "name": "粒子烟花发射器",
-      "tags": ["canvas", "粒子"],
+      "name": "Fireworks",
+      "tags": ["canvas", "particles"],
       "link": "/code/fireworks/",
       "from": "https://codepen.io/Supercopra/pen/JBwgzJ",
       "author": {
@@ -11,13 +11,23 @@
       }
     },
     {
-      "name": "抽象油画可视化",
-      "tags": ["canvas", "点与线段"],
+      "name": "Abstract Canvas Visualization",
+      "tags": ["canvas", "dot", "line"],
       "link": "/code/abstract-visualization/",
       "from": "https://codepen.io/jackrugile/pen/ohFbx",
       "author": {
         "name": "Jack Rugile",
         "homePage": "https://codepen.io/jackrugile"
+      }
+    },
+    {
+      "name": "Neon Hexagon-Forming Particles",
+      "tags": ["canvas", "particles"],
+      "link": "/code/beehive/",
+      "from": "https://codepen.io/towc/pen/mJzOWJ",
+      "author": {
+        "name": "Matei Copot",
+        "homePage": "https://codepen.io/towc"
       }
     }
   ]

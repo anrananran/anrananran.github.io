@@ -3,7 +3,7 @@
     <div class="home-items">
       <ul>
         <li v-for="item in items" :key="item.link" class="home-item" @click="onClickLink(item.link)">
-          <iframe class="iframe" width="240" height="150" :src="item.link" frameborder="0" scrolling="no" seamless></iframe>
+          <iframe class="iframe" width="240" height="150" :src="item.link" frameborder="0" scrolling="no" seamless />
           <div class="right">
             <h2 class="name" :title="item.name">{{ item.name }}</h2>
             <div class="tags">
