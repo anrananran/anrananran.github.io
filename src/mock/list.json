@@ -29,6 +29,26 @@
         "name": "Matei Copot",
         "homePage": "https://codepen.io/towc"
       }
+    },
+    {
+      "name": "Simplex Vector Flow Field",
+      "tags": ["canvas", "line"],
+      "link": "/code/simplex-vector-flow-field/",
+      "from": "https://codepen.io/jackrugile/pen/zodPjd",
+      "author": {
+        "name": "Jack Rugile",
+        "homePage": "https://codepen.io/jackrugile"
+      }
+    },
+    {
+      "name": "Rainbow Firestorm",
+      "tags": ["canvas", "dot"],
+      "link": "/code/rainbow-firestorm/",
+      "from": "https://codepen.io/jackrugile/pen/AokpF",
+      "author": {
+        "name": "Jack Rugile",
+        "homePage": "https://codepen.io/jackrugile"
+      }
     }
   ]
 }
