@@ -4,7 +4,7 @@
       <ul>
         <li v-for="item in items" :key="item.link" class="home-item" @click="onClickLink(item.link)">
           <tooltip :content="item.name">
-            <iframe class="iframe" width="240" height="150" :src="`/tulu${item.link}`" frameborder="0" scrolling="no" seamless />
+            <iframe class="iframe" width="100%" height="150" :src="`/tulu${item.link}`" frameborder="0" scrolling="no" seamless />
           </tooltip>
         </li>
       </ul>
@@ -30,66 +30,44 @@ export default {
 }
 </script>
 
+<style lang="scss">
+.home {
+  .ivu-tooltip,
+  .ivu-tooltip-rel {
+    display: block;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .home {
   .home-items {
-    width: 900px;
-    margin: 0 auto;
+    width: 930px;
+    overflow: hidden;
+    margin: 50px auto;
   }
   .home-item {
-    margin-bottom: 10px;
+    width: 300px;
+    margin: 5px;
     background-color: #2F333B;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #191A1E;
     display: flex;
     flex-direction: row;
     align-items: center;
+    float: left;
+    cursor: pointer;
 
     &:hover {
       background-color: #333741;
       cursor: pointer;
     }
+
     .iframe {
-      margin-right: 20px;
-    }
-    .right {
-      flex: 1;
-    }
-    .name {
-      color: #D3D5DC;
-      font-size: 24px;
-      font-weight: 400;
-      margin: 6px 0 15px;
-    }
-    
-    .tags {
-      color: #9298A7;
-      font-size: 16px;
-      margin: 0 0 15px;
-      line-height: 1.8;
-    }
-    .tag {
-      margin: 0 10px 0 0;
-      background-color: #5271C7;
-      padding: 5px 10px;
-      color: #fff;
-      font-size: 14px;
-      border: 1px solid #191A1E;
-      border-radius: 4px;
-    }
-    .from {
-      color: #9298A7;
-      cursor: pointer;
-      line-height: 1.8;
-      width: 400px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      margin-bottom: 5px;
-    }
-    .author {
-      margin-right: 10px;
+      display: block;
+      border-radius: 3px;
+      pointer-events: none;
     }
   }
 }
