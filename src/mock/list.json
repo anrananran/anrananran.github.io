@@ -2,53 +2,23 @@
   "items": [
     {
       "name": "Fireworks",
-      "tags": ["canvas", "particles"],
-      "link": "/code/fireworks/",
-      "from": "https://codepen.io/Supercopra/pen/JBwgzJ",
-      "author": {
-        "name": "Julius Horn",
-        "homePage": "https://codepen.io/Supercopra"
-      }
+      "link": "/code/fireworks/"
     },
     {
       "name": "Abstract Canvas Visualization",
-      "tags": ["canvas", "dot", "line"],
-      "link": "/code/abstract-visualization/",
-      "from": "https://codepen.io/jackrugile/pen/ohFbx",
-      "author": {
-        "name": "Jack Rugile",
-        "homePage": "https://codepen.io/jackrugile"
-      }
+      "link": "/code/abstract-visualization/"
     },
     {
       "name": "Neon Hexagon-Forming Particles",
-      "tags": ["canvas", "particles"],
-      "link": "/code/beehive/",
-      "from": "https://codepen.io/towc/pen/mJzOWJ",
-      "author": {
-        "name": "Matei Copot",
-        "homePage": "https://codepen.io/towc"
-      }
+      "link": "/code/beehive/"
     },
     {
       "name": "Simplex Vector Flow Field",
-      "tags": ["canvas", "line"],
-      "link": "/code/simplex-vector-flow-field/",
-      "from": "https://codepen.io/jackrugile/pen/zodPjd",
-      "author": {
-        "name": "Jack Rugile",
-        "homePage": "https://codepen.io/jackrugile"
-      }
+      "link": "/code/simplex-vector-flow-field/"
     },
     {
       "name": "Rainbow Firestorm",
-      "tags": ["canvas", "dot"],
-      "link": "/code/rainbow-firestorm/",
-      "from": "https://codepen.io/jackrugile/pen/AokpF",
-      "author": {
-        "name": "Jack Rugile",
-        "homePage": "https://codepen.io/jackrugile"
-      }
+      "link": "/code/rainbow-firestorm/"
     }
   ]
 }

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/fullpage/jquery.fullpage.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/iconfont/iconfont.css">
+    <link rel="stylesheet" href="app/main.css">
+    <title>周五分享</title>
+    <script>
+        window.COLORS = ['#48B3EB','#FF8B00','#ED3F14','#333333','#999999'];
+    </script>
+</head>
+<body>
+    <div class="page-box" id="J-page-box">
+        <div class="section" data-anchor="section-1">
+            <div class="slide">
+                <div class="S-start" id="J-loading">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i> 等待中...
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-title">请找出下面最大的数字</div>
+                <div class="Q-con">
+                        <span class="num num-A">17227223</span> 
+                        <span class="num num-B">28722400</span>
+                        <span class="num num-C">2943150</span>
+                        <span class="num num-D">1282380</span>
+                        <span class="num num-E">9287270</span>
+                        <span class="num num-F">11746110</span>
+                        <span class="num num-G">24653130</span>
+                        <span class="num num-H">7310089</span>
+                        <span class="num num-I">1548270</span>
+                        <span class="num num-J">60021195</span>
+                        <span class="num num-K">16771523</span>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-title">有什么方法可以更快的找到?</div>
+            </div>
+            <div class="slide">
+                <div class="B-title">将数据转化为图形</div>
+                <div class="B-chart" id="J-max-num">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" data-anchor="section-2">
+            <div class="slide">
+                <div class="Q-title">什么是数据可视化？</div>
+            </div>
+            <div class="slide">
+                <div class="Q-title">概念：</div>
+                <div class="Q-con ta-l w-text">
+                    <p class="md-text">将数据以图表的形式直观的展现出来，便于分析和统计。</p>
+                    <p class="md-mark">数据可视化的目的是：发现数据背后的规律，挖掘隐藏在数据中的信息。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-title">举个栗子：</div>
+                <div class="Q-con">
+                    <a class="md-link" href="https://www.baidu.com/s?wd=BABA&rsv_spt=1&rsv_iqid=0xfa23086800034c70&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=7&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=5037&rsv_sug4=5038" target="_blank">BABA</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 折线图 -->
+        <div class="section" data-anchor="section-3">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="fa fa-line-chart"></i> 
+                    <b>折线图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：数据项在时间轴上发生变化，形成一条折线。</p>
+                    <p class="md-mark">作用：观察数据的变化趋势。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">普通折线图</div>
+                <div class="B-chart" id="J-line-1">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">大数据量面积图</div>
+                <div class="B-chart" id="J-line-2">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">堆叠区域图</div>
+                <div class="B-chart" id="J-line-3">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 柱状图 -->
+        <div class="section" data-anchor="section-4">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="fa fa-bar-chart"></i>
+                    <b>柱状图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：枚举数据项以矩形显示，矩形长度代表数值。</p>
+                    <p class="md-mark">作用：对比分类数据的数值大小。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">普通柱状图</div>
+                <div class="B-chart" id="J-bar-1">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">堆叠条形图</div>
+                <div class="B-chart" id="J-bar-2">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">极坐标堆叠柱状图</div>
+                <div class="B-chart" id="J-bar-3" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 饼图 -->
+        <div class="section" data-anchor="section-5">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="fa fa-pie-chart"></i>
+                    <b>饼图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：将圆分成若干区块，每个区块的弧度代表其所占数据总量的比例。</p>
+                    <p class="md-mark">作用：对比各项数据的占比情况。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">普通饼图</div>
+                <div class="B-chart" id="J-pie-1">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">玫瑰图</div>
+                <div class="B-chart" id="J-pie-2">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">环形图</div>
+                <div class="B-chart" id="J-pie-3">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">旭日图（多层级数据）</div>
+                <div class="B-chart" id="J-pie-4" style="height: 600px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 雷达图 -->
+        <div class="section" data-anchor="section-6">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="iconfont icon-radar"></i>
+                    <b>雷达图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：由中心向外辐射出多条坐标轴，数据项分布在坐标轴上，数据点相连形成一个多边形。</p>
+                    <p class="md-mark">作用：观察数据项的优劣情况。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">雷达图</div>
+                <div class="B-chart" id="J-radar-1" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 散点图 -->
+        <div class="section" data-anchor="section-7">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="iconfont icon-scatter"></i>
+                    <b>散点图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：多个数据项分布在坐标系中，形成密集的点。</p>
+                    <p class="md-mark">作用：观察数据的分布情况，变量之间是否存在相关性。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">普通散点图</div>
+                <div class="B-chart" id="J-scatter-1" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">大规模散点图</div>
+                <div class="B-chart" id="J-scatter-2" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 关系图 -->
+        <div class="section" data-anchor="section-8">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="iconfont icon-graph"></i>
+                    <b>关系图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：将数据项以线相连，形成复杂的弦图。</p>
+                    <p class="md-mark">作用：观察对象之间的关系。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">关系图</div>
+                <div class="B-chart" id="J-graph-1" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 树图 -->
+        <div class="section" data-anchor="section-9">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="iconfont icon-tree"></i>
+                    <b>树图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：将父子关系的数据展开，形成一棵树。</p>
+                    <p class="md-mark">作用：观察数据的层次结构。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">普通树图</div>
+                <div class="B-chart" id="J-tree-1" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">矩形树图</div>
+                <div class="B-chart" id="J-tree-2" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 日历图 -->
+        <div class="section" data-anchor="section-10">
+            <div class="slide">
+                <div class="S-circle">
+                    <i class="iconfont icon-rili"></i>
+                    <b>日历图</b>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">形式：以时间（天）为索引呈现数据，组成一个日历表格。</p>
+                    <p class="md-mark">作用：观察数据在每一天的大小情况。</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="B-title">日历图</div>
+                <div class="B-chart" id="J-calendar-1" style="height: 500px;">
+                    <i class="fa fa-spinner fa-spin loading-svg"></i>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="Q-title"><a target="_blank" href="https://github.com/tj">TJ's github</a></div>
+            </div>
+        </div>
+        
+        <!-- 工具 -->
+        <div class="section" data-anchor="section-n">
+            <div class="slide">
+                <div class="Q-title">工具推荐</div>
+            </div>
+            <div class="slide">
+                <div class="Q-con ta-l w-text">
+                    <p class="md-mark">
+                        <a target="_blank" href="http://echarts.baidu.com/index.html">ECharts</a>: 图表丰富，文档齐全，免费
+                    </p>
+                    <p class="md-mark">
+                        <a target="_blank" href="http://www.hcharts.cn/">highcharts</a>: 和ECharts相比，已经没有优势，收费
+                    </p>
+                    <p class="md-mark">
+                        <a target="_blank" href="https://d3js.org/">D3.js</a>: 功能非常强大，更自由，较复杂，免费
+                    </p>
+                    <p class="md-mark">
+                        <a target="_blank" href="https://data.aliyun.com/visual/datav">datav</a>: 图形化界面，天猫同款，收费
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery.easings.min.js"></script>
+    <script src="assets/scrolloverflow.min.js"></script>
+    <script src="assets/fullpage/jquery.fullpage.extensions.js"></script>
+    
+    <script src="assets/echarts/echarts.min.js"></script>
+    <script src="assets/echarts/map/js/china.js"></script>
+    <script src="assets/echarts/extension/bmap.min.js"></script>
+    <script src="assets/echarts/extension/dataTool.min.js"></script>
+    
+    <script src="app/main.js"></script>
+    
+    <script src="charts/max-num.js"></script> <!--小游戏-->
+    <script src="charts/slot-line.js"></script> <!--折线图-->
+    <script src="charts/slot-bar.js"></script> <!--柱状图-->
+    <script src="charts/slot-pie.js"></script> <!--饼图-->
+    <script src="charts/slot-radar.js"></script> <!--雷达图-->
+    <script src="charts/slot-scatter.js"></script> <!--散点图-->
+    <script src="charts/slot-graph.js"></script> <!--关系图-->
+    <script src="charts/slot-tree.js"></script> <!--树图-->
+    <script src="charts/slot-calendar.js"></script> <!--日历图-->
+</body>
+</html>

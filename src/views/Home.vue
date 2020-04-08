@@ -3,19 +3,9 @@
     <div class="home-items">
       <ul>
         <li v-for="item in items" :key="item.link" class="home-item" @click="onClickLink(item.link)">
-          <iframe class="iframe" width="240" height="150" :src="item.link" frameborder="0" scrolling="no" seamless />
-          <div class="right">
-            <h2 class="name" :title="item.name">{{ item.name }}</h2>
-            <div class="tags">
-              <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
-            </div>
-            <div class="from">
-              <span class="author" :title="item.author.name" @click.stop="onClickLink(item.author.homePage)">作者：{{ item.author.name }}</span>
-            </div>
-            <div class="from">
-              <span :title="item.from" @click.stop="onClickLink(item.from)">来源：{{ item.from }}</span>
-            </div>
-          </div>
+          <tooltip :content="item.name">
+            <iframe class="iframe" width="240" height="150" :src="`/tulu${item.link}`" frameborder="0" scrolling="no" seamless />
+          </tooltip>
         </li>
       </ul>
     </div>
