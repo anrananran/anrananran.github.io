@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle Emitter</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        overflow: hidden;
+      }
+
+      canvas {
+        background: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      .hud {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Lucida Console', Monaco, monospace;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        color: #eee;
+        font-size: 10px;
+        padding: 4px 8px;
+        background: rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script src="./TweenMax-latest-beta.js"></script>
+    <script src="./ModifiersPlugin-latest-beta.js"></script>
+    <script src="./LinkedList2.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

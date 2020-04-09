@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle text animation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background-color: #1a1a1a;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        width: 100%;
+        color: #eeeeee;
+        overflow: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .twitter {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      .src {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        text-align: right;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="canvas"></canvas>
+    <script src="./index.js"></script>
+  </body>
+</html>
