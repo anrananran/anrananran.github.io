@@ -4,7 +4,7 @@
       <ul>
         <li v-for="item in items" :key="item.link" class="home-item" @click="onClickLink(item.link)">
           <tooltip :content="item.name">
-            <iframe class="iframe" width="100%" height="150" :src="`/tulu${item.link}`" frameborder="0" scrolling="no" seamless />
+            <iframe class="iframe" width="100%" height="150" :src="item.link" frameborder="0" scrolling="no" seamless />
           </tooltip>
         </li>
       </ul>

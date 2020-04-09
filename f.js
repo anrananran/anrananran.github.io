@@ -25,7 +25,7 @@ emitter.on('file', function(file) {
     if (p.indexOf('share-ppt') === -1) { // 排除ppt目录
       content.items.push({
         name: name(p),
-        link: p
+        link: '/tulu' + p
       })
     }
   }
