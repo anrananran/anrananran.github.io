@@ -4,7 +4,7 @@
       <ul>
         <li v-for="item in items" :key="item.link" class="home-item" @click="onClickLink(item.link)">
           <tooltip :content="item.name">
-            <iframe class="iframe" width="100%" height="150" :src="item.link" frameborder="0" scrolling="no" seamless />
+            <iframe class="iframe" width="100%" height="100%" :src="item.link" frameborder="0" scrolling="no" seamless />
           </tooltip>
         </li>
       </ul>
@@ -34,6 +34,8 @@ export default {
 .home {
   .ivu-tooltip,
   .ivu-tooltip-rel {
+    width: 100%;
+    height: 100%;
     display: block;
   }
 }
@@ -48,6 +50,7 @@ export default {
   }
   .home-item {
     width: 300px;
+    height: 200px;
     margin: 5px;
     background-color: #2F333B;
     padding: 10px;
@@ -68,6 +71,21 @@ export default {
       display: block;
       border-radius: 3px;
       pointer-events: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    .home-items {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px;
+    }
+
+    .home-item {
+      width: 100%;
+      margin: 0 0 5px;
     }
   }
 }
