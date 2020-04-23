@@ -1,14 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import ViewUI from 'view-design'
 
 import 'normalize.css'
 import 'view-design/dist/styles/iview.css'
 import '@/styles/index.scss'
 import './icons'
-
-Vue.use(ViewUI)
 
 Vue.config.productionTip = false
 
