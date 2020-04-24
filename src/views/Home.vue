@@ -9,7 +9,7 @@
         </li>
       </ul>
     </div>
-    <page :total="items.length" :current.sync="curr" class="home-pages" @on-change="onPageChange" />
+    <page :total="items.length" :page-size="size" :current.sync="curr" class="home-pages" @on-change="onPageChange" />
   </div>
 </template>
 
@@ -26,14 +26,15 @@ export default {
   data() {
     return {
       items,
-      curr: 1
+      curr: 1,
+      size: 6
     }
   },
   computed: {
     renderItems() {
-      const len = 6
-      const start = (this.curr - 1) * len
-      return this.items.slice(start, start + len)
+      const start = (this.curr - 1) * this.size
+      console.log('总数', this.items.length)
+      return this.items.slice(start, start + this.size)
     }
   },
   methods: {
