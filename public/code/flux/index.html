@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flux</title>
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -khtml-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    canvas {
+      position: absolute;
+      top:0;
+      left:0;
+      cursor: pointer;
+    }
+    h2{
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-family: 'Josefin Sans', sans-serif;
+      letter-spacing: 4px;
+      opacity: 0.2;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <canvas></canvas>
+  <script src="./three.js"></script>
+  <script src="./perlin.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
