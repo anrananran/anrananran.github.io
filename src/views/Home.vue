@@ -4,7 +4,8 @@
       <ul>
         <li v-for="item in renderItems" :key="item.link" class="home-item" @click="onClickLink(item.link)">
           <tooltip :content="item.name">
-            <iframe class="iframe" width="100%" height="100%" :src="item.link" frameborder="0" scrolling="no" seamless />
+            <iframe v-if="!item.thumb" :id="item.id" class="iframe" width="100%" height="100%" loading="lazy" :src="item.link" frameborder="0" scrolling="no" seamless />
+            <img v-else class="thumb" :src="item.thumb" :alt="item.name">
           </tooltip>
         </li>
       </ul>
@@ -16,6 +17,17 @@
 <script>
 import { items } from '@/mock/list'
 import { Tooltip, Page } from 'view-design'
+import { getRandomString } from '@/utils/util'
+
+function parseItems(items) {
+  return items.map(item => {
+    return {
+      id: getRandomString(8),
+      thumb: '',
+      ...item
+    }
+  })
+}
 
 export default {
   name: 'Home',
@@ -25,7 +37,7 @@ export default {
   },
   data() {
     return {
-      items,
+      items: parseItems(items),
       curr: 1,
       size: 6
     }
@@ -36,6 +48,17 @@ export default {
       console.log('总数', this.items.length)
       return this.items.slice(start, start + this.size)
     }
+  },
+  mounted() {
+    window.addEventListener('message', (event) => {
+      console.log('缩略图：', event.data)
+      const res = event.data
+      this.items.forEach(item => {
+        if (item.link === res.link) {
+          item.thumb = res.thumb
+        }
+      })
+    })
   },
   methods: {
     onClickLink(link) {
@@ -55,6 +78,10 @@ export default {
     width: 100%;
     height: 100%;
     display: block;
+  }
+
+  .ivu-tooltip-inner {
+    max-width: inherit;
   }
 
   .ivu-page {
@@ -82,8 +109,15 @@ export default {
   padding: 50px 0;
   .home-items {
     width: 930px;
-    overflow: hidden;
     margin: 0 auto 20px;
+
+    &:after {
+      content: '\20';
+      height: 0;
+      clear: both;
+      display: block;
+      visibility: hidden;
+    }
   }
   .home-item {
     width: 300px;
@@ -98,6 +132,7 @@ export default {
     align-items: center;
     float: left;
     cursor: pointer;
+    position: relative;
 
     &:hover {
       background-color: #333741;
@@ -108,6 +143,15 @@ export default {
       display: block;
       border-radius: 3px;
       pointer-events: none;
+    }
+
+    .thumb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
     }
   }
 }

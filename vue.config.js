@@ -22,6 +22,13 @@ module.exports = {
       errors: true
     }
   },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
+  },
   chainWebpack(config) {
     config.module
       .rule('svg')
