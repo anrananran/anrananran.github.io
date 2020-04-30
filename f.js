@@ -13,6 +13,14 @@ function toCamelCase(str) {
   }).join(' ')
 }
 
+function parseCatalog(items) {
+  let str = ''
+  items.forEach(item => {
+    str += `+ [${item.name}](${item.link}) \n`
+  })
+  return str
+}
+
 emitter.on('file', function(file) {
   if (file && file.endsWith('.html')) {
     const p = path.relative(__dirname, file).replace('public', '').replace(/\\/g, '/')
@@ -32,6 +40,14 @@ emitter.on('file', function(file) {
 })
 emitter.on('end', function() {
   fs.writeFile('./src/mock/list.json', JSON.stringify(content), () => {
+    console.log('写入完成')
+  })
+
+  const mdCont = `
+## 目录 \n
+${parseCatalog(content.items)}
+  `
+  fs.writeFile('./README.md', mdCont, () => {
     console.log('写入完成')
   })
 })
