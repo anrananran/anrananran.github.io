@@ -45,13 +45,11 @@ export default {
   computed: {
     renderItems() {
       const start = (this.curr - 1) * this.size
-      console.log('总数', this.items.length)
       return this.items.slice(start, start + this.size)
     }
   },
   mounted() {
     window.addEventListener('message', (event) => {
-      console.log('缩略图：', event.data)
       const res = event.data
       this.items.forEach(item => {
         if (item.link === res.link) {
