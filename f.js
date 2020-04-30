@@ -3,6 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const emitter = walk('./public/code')
+const baseURL = 'https://anrananran.github.io'
 const content = {
   items: []
 }
@@ -16,7 +17,7 @@ function toCamelCase(str) {
 function parseCatalog(items) {
   let str = ''
   items.forEach(item => {
-    str += `+ [${item.name}](${item.link}) \n`
+    str += `+ [${item.name}](${baseURL + item.link}) \n`
   })
   return str
 }
