@@ -27,6 +27,7 @@ body {
   user-select:none;
   cursor:default;
   overflow: hidden;
+  z-index: 1000;
 }
 
 #Loading div {

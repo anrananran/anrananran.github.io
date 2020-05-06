@@ -41,7 +41,7 @@ emitter.on('file', function(file) {
 })
 emitter.on('end', function() {
   fs.writeFile('./src/mock/list.json', JSON.stringify(content), () => {
-    console.log('写入完成')
+    console.log('写入json完成')
   })
 
   const mdCont = `
@@ -49,6 +49,6 @@ emitter.on('end', function() {
 ${parseCatalog(content.items)}
   `
   fs.writeFile('./README.md', mdCont, () => {
-    console.log('写入完成')
+    console.log('写入Readme完成')
   })
 })
