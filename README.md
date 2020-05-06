@@ -2,14 +2,14 @@
 ## 目录 
 
 + [Abstract Canvas Visualization](https://anrananran.github.io/tulu/code/abstract-canvas-visualization/index.html) 
-+ [Blooming Flower](https://anrananran.github.io/tulu/code/blooming-flower/index.html) 
 + [Canvas Trails](https://anrananran.github.io/tulu/code/canvas-trails/index.html) 
++ [Blooming Flower](https://anrananran.github.io/tulu/code/blooming-flower/index.html) 
 + [Chaotic Charges](https://anrananran.github.io/tulu/code/chaotic-charges/index.html) 
 + [Circle Shake](https://anrananran.github.io/tulu/code/circle-shake/index.html) 
 + [Diffusion Limited Aggregation](https://anrananran.github.io/tulu/code/diffusion-limited-aggregation/index.html) 
-+ [Explosive Attraction](https://anrananran.github.io/tulu/code/explosive-attraction/index.html) 
 + [Fire Water](https://anrananran.github.io/tulu/code/fire-water/index.html) 
 + [Fireworks](https://anrananran.github.io/tulu/code/fireworks/index.html) 
++ [Explosive Attraction](https://anrananran.github.io/tulu/code/explosive-attraction/index.html) 
 + [Flux](https://anrananran.github.io/tulu/code/flux/index.html) 
 + [Galactic Orbitals](https://anrananran.github.io/tulu/code/galactic-orbitals/index.html) 
 + [Interactive Meteors Fork From BrianDGLS](https://anrananran.github.io/tulu/code/Interactive-Meteors-fork-from-BrianDGLS/index.html) 
@@ -21,7 +21,6 @@
 + [Particle Scramble](https://anrananran.github.io/tulu/code/particle-scramble/index.html) 
 + [Particle Surge](https://anrananran.github.io/tulu/code/particle-surge/index.html) 
 + [Particle Text Animation](https://anrananran.github.io/tulu/code/particle-text-animation/index.html) 
-+ [Particles Polygon Mask With Multiple Paths](https://anrananran.github.io/tulu/code/particles-polygon-mask-with-multiple-paths/index.html) 
 + [Rain Snow Simulator](https://anrananran.github.io/tulu/code/rain-snow-simulator/index.html) 
 + [Rainbow Firestorm](https://anrananran.github.io/tulu/code/rainbow-firestorm/index.html) 
 + [Rainbow Particle Horizon](https://anrananran.github.io/tulu/code/rainbow-particle-horizon/index.html) 
@@ -30,5 +29,6 @@
 + [Squidematics](https://anrananran.github.io/tulu/code/Squidematics/index.html) 
 + [Waterfall Experiment](https://anrananran.github.io/tulu/code/waterfall-experiment/index.html) 
 + [Wavy 3d Rainbow Lattice](https://anrananran.github.io/tulu/code/wavy-3d-rainbow-lattice/index.html) 
++ [Particles Polygon Mask With Multiple Paths](https://anrananran.github.io/tulu/code/particles-polygon-mask-with-multiple-paths/index.html) 
 
   
