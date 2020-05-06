@@ -217,10 +217,10 @@ function endLoading() {
 
 insertStyle()
 startLoading()
-window.onload = function() {
+window.addEventListener('load', function() {
   getCanvasThumb()
-  
+  console.log('loaded scripts')
   setTimeout(() => {
     endLoading()
   }, 2000)
-}
+})

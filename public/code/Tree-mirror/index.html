@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree mirror</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden;
+      }
+
+      body {
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .canvas {
+        display: block;
+        border-radius: 50%;
+      }
+
+      .canvas-pattern {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="canvas canvas-pattern js-canvas" width="500" height="500"></canvas>
+    <canvas class="canvas js-duplicate" width="500" height="500"></canvas>
+    <script src="../thumbs.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

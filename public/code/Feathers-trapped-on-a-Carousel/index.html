@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feathers trapped on a Carousel</title>
+    <style>
+      body,
+      html,
+      canvas {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <!-- feather from freepik.com -->
+    <!-- Reduce the amount of feathers in the Js if it lags in your browser -->
+    <script src="../thumbs.js"></script>
+    <script src="./three.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -11,6 +11,10 @@
       </ul>
     </div>
     <page :total="items.length" :page-size="size" :current.sync="curr" class="home-pages" @on-change="onPageChange" />
+
+    <div class="copyright">
+      Powerd with love ©2019-Now
+    </div>
   </div>
 </template>
 
@@ -89,14 +93,29 @@ export default {
   .ivu-page-prev,
   .ivu-page-next {
     background-color: rgba(#333, .8);
-    color: #fefefe;
     border-color: #000;
     min-width: 40px;
     height: 40px;
     line-height: 40px;
 
+    a {
+      color: #fefefe;
+    }
+
     &:hover {
-      border-color: #222;
+      box-shadow: 0 0 12px 1px rgba(#000, .1);
+      border-color: darken(#d2ba47, 10%);
+
+      a {
+        color: darken(#d2ba47, 10%)
+      }
+    }
+  }
+  .ivu-page-item-active {
+    border-color: #d2ba47;
+
+    a, &:hover a {
+      color: #d2ba47;
     }
   }
 }
@@ -104,7 +123,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  padding: 50px 0;
+  padding: 50px 0 70px;
   .home-items {
     width: 930px;
     margin: 0 auto 20px;
@@ -152,6 +171,19 @@ export default {
       z-index: 3;
       object-fit: cover;
     }
+  }
+
+  .copyright {
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    z-index: 2000;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
