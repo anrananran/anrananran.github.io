@@ -24,7 +24,10 @@ function parseCatalog(items) {
 
 emitter.on('file', function(file) {
   if (file && file.endsWith('.html')) {
-    const p = path.relative(__dirname, file).replace('public', '').replace(/\\/g, '/')
+    const p = path.relative(__dirname, file)
+      .replace('public', '')
+      .replace(/\\/g, '/')
+      .replace('/index.html', '/')
     console.info('写入:', p)
     const name = p => {
       const n = p.split('/')
