@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CURL NOISE</title>
+    <style>
+      body {
+        background-color: #1b445e;
+        margin: 0;
+        overflow: hidden;
+        background-repeat: no-repeat;
+      }
+
+      .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px 15px;
+        color: #eee;
+        font-size: 13px;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+      .instructions {
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        padding: 5px 15px;
+        color: #eee;
+        font-size: 13px;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+      canvas {
+        display: block;
+      }
+      .dg {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script src="../thumbs.js"></script>
+    <script src="../dat.gui.min.js"></script>
+    <script src="../perlin.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

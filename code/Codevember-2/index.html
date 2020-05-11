@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codevember 2</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        background: radial-gradient(#181818, #000);
+        overflow: hidden;
+      }
+      body:after {
+        background: #181818;
+        background: radial-gradient(#000, #555);
+        border-radius: 50%;
+        bottom: 0;
+        content: '';
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        will-change: transform;
+      }
+
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../jquery.min.js"></script>
+    <script src="../thumbs.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
