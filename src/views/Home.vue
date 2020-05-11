@@ -1,5 +1,11 @@
 <template>
   <div class="home">
+    <div class="home-header">
+      <logo class="logo" />
+      <a class="github" href="https://github.com/anrananran/anrananran.github.io" target="_blank">
+        <svg-icon icon-class="github" />
+      </a>
+    </div>
     <div class="home-items">
       <ul>
         <li v-for="item in renderItems" :key="item.link" class="home-item" @click="onClickLink(item.link)">
@@ -19,6 +25,7 @@
 </template>
 
 <script>
+import Logo from '@/components/Logo'
 import { items } from '@/mock/list'
 import { Tooltip, Page } from 'view-design'
 import { getRandomString } from '@/utils/util'
@@ -37,7 +44,8 @@ export default {
   name: 'Home',
   components: {
     Tooltip,
-    Page
+    Page,
+    Logo
   },
   data() {
     return {
@@ -73,60 +81,40 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.home {
-  .ivu-tooltip,
-  .ivu-tooltip-rel {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  .ivu-tooltip-inner {
-    max-width: inherit;
-  }
-
-  .ivu-page {
-    text-align: center;
-  }
-  .ivu-page-item,
-  .ivu-page-prev,
-  .ivu-page-next {
-    background-color: rgba(#333, .8);
-    border-color: #000;
-    min-width: 40px;
-    height: 40px;
-    line-height: 40px;
-
-    a {
-      color: #fefefe;
-    }
-
-    &:hover {
-      box-shadow: 0 0 12px 1px rgba(#000, .1);
-      border-color: darken(#d2ba47, 10%);
-
-      a {
-        color: darken(#d2ba47, 10%)
-      }
-    }
-  }
-  .ivu-page-item-active {
-    border-color: #d2ba47;
-
-    a, &:hover a {
-      color: #d2ba47;
-    }
-  }
-}
-</style>
-
 <style lang="scss" scoped>
 .home {
-  padding: 50px 0 70px;
+  padding: 70px 0;
+  height: 100vh;
+  box-sizing: border-box;
+
+  .home-header {
+    height: 60px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 20px 2px rgba(#000, .3);
+    border-bottom: 2px solid #ff4200;
+
+    .logo {
+      position: absolute;
+      left: 12px;
+      top: 8px;
+    }
+
+    .github {
+      position: absolute;
+      right: 10px;
+      top: 6px;
+      font-size: 40px;
+      line-height: 1;
+      color: #fff;
+    }
+  }
   .home-items {
     width: 930px;
-    margin: 0 auto 20px;
+    margin: 20px auto;
 
     &:after {
       content: '\20';
@@ -174,6 +162,7 @@ export default {
   }
 
   .copyright {
+    box-shadow: 0 -2px 15px 2px rgba(#000, .1);
     padding: 15px 20px;
     background-color: #000;
     color: #fff;
@@ -184,6 +173,52 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+}
+
+.home /deep/ {
+  .ivu-tooltip,
+  .ivu-tooltip-rel {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .ivu-tooltip-inner {
+    max-width: inherit;
+  }
+
+  .ivu-page {
+    text-align: center;
+  }
+  .ivu-page-item,
+  .ivu-page-prev,
+  .ivu-page-next {
+    background-color: rgba(#333, .8);
+    border-color: #000;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    a {
+      color: #fefefe;
+    }
+
+    &:hover {
+      box-shadow: 0 0 12px 1px rgba(#000, .1);
+      border-color: darken(#d2ba47, 10%);
+
+      a {
+        color: darken(#d2ba47, 10%)
+      }
+    }
+  }
+  .ivu-page-item-active {
+    border-color: #d2ba47;
+
+    a, &:hover a {
+      color: #d2ba47;
+    }
   }
 }
 
