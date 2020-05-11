@@ -2,7 +2,7 @@ const walk = require('walkdir')
 const fs = require('fs')
 const path = require('path')
 
-const emitter = walk('./public/code')
+const emitter = walk('./code')
 const baseURL = 'https://anrananran.github.io'
 const content = {
   items: []
@@ -25,7 +25,6 @@ function parseCatalog(items) {
 emitter.on('file', function(file) {
   if (file && file.endsWith('.html')) {
     const p = path.relative(__dirname, file)
-      .replace('public', '')
       .replace(/\\/g, '/')
       .replace('/index.html', '/')
     console.info('写入:', p)
@@ -37,7 +36,7 @@ emitter.on('file', function(file) {
     if (p.indexOf('share-ppt') === -1) { // 排除ppt目录
       content.items.push({
         name: name(p),
-        link: '/tulu' + p
+        link: '/' + p
       })
     }
   }

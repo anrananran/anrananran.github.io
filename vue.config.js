@@ -6,10 +6,10 @@ function resolve(dir) {
 }
 
 const port = 6375 // dev port
-const context = 'tulu'
+
 module.exports = {
-  publicPath: '/' + context,
-  outputDir: context,
+  publicPath: '/',
+  outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
