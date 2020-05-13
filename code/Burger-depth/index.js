@@ -39,7 +39,10 @@ function init(){
 	gui.add(userData, 'wireframe').onChange(createParticles);
 	gui.add(userData, 'randomize');
 
-	renderer = new THREE.WebGLRenderer({canvas : document.getElementById('scene')});
+	renderer = new THREE.WebGLRenderer({
+    canvas : document.getElementById('scene'),
+    preserveDrawingBuffer: true
+  });
 	renderer.setSize(ww,wh);
 
 	scene = new THREE.Scene();

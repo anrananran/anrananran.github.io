@@ -7,7 +7,8 @@ function init() {
 
   renderer = new THREE.WebGLRenderer({
     canvas: document.getElementById("scene"),
-    antialias: true
+    antialias: true,
+    preserveDrawingBuffer: true
   });
   renderer.setSize(ww, wh);
   renderer.setClearColor(0xe6daf9);

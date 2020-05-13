@@ -239,6 +239,7 @@ const canvas = document.getElementById('canvas-webgl');
 const renderer = new THREE.WebGLRenderer({
   antialias: false,
   canvas: canvas,
+  preserveDrawingBuffer: true
 });
 const scene = new THREE.Scene();
 const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 1, 10000);

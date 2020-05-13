@@ -1,7 +1,8 @@
 console.clear();
 var renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector("canvas"),
-  antialias: true
+  antialias: true,
+  preserveDrawingBuffer: true
 });
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
 renderer.setSize(window.innerWidth, window.innerHeight);

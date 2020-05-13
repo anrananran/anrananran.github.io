@@ -784,7 +784,8 @@ class Generator {
   
   setupRenderer() {
     this.renderer = new THREE.WebGLRenderer({
-      antialias: true
+      antialias: true,
+      preserveDrawingBuffer: true
     });
     document.body.appendChild(this.renderer.domElement);
   }

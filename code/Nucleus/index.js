@@ -3,7 +3,9 @@ scene.fog = new THREE.Fog('#000033', 200, 300);
 scene.background = new THREE.Color( '#000033' );
 			const camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-			var renderer = new THREE.WebGLRenderer();
+			var renderer = new THREE.WebGLRenderer({
+        preserveDrawingBuffer: true
+      });
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 addNote()

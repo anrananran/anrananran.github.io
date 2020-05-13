@@ -13,7 +13,8 @@ var center = new THREE.Vector3(0, 100, 0);
 function init() {
   var canvas = document.getElementById("scene");
   renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+    canvas: canvas,
+    preserveDrawingBuffer: true
   });
   renderer.setSize(ww, wh);
   renderer.setClearColor(0xF5CC70);

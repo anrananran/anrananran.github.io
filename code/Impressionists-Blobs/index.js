@@ -51,7 +51,7 @@ function init() {
     camera.position.z = cameraStartZ;
     scene = new THREE.Scene();
    
-    renderer = new THREE.WebGLRenderer({antialias: true, alpha:true});
+    renderer = new THREE.WebGLRenderer({antialias: true, alpha:true, preserveDrawingBuffer: true});
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight );
     renderer.gammaInput = true;
