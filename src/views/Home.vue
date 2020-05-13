@@ -96,6 +96,7 @@ export default {
     right: 0;
     box-shadow: 0 2px 20px 2px rgba(#000, .3);
     border-bottom: 2px solid #ff4200;
+    z-index: 5;
 
     .logo {
       position: absolute;
