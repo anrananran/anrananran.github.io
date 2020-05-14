@@ -51,7 +51,7 @@ export default {
     return {
       items: parseItems(items),
       curr: 1,
-      size: 6
+      size: 4
     }
   },
   computed: {
@@ -84,7 +84,7 @@ export default {
 <style lang="scss" scoped>
 .home {
   padding: 70px 0;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
 
   .home-header {
@@ -101,7 +101,7 @@ export default {
     .logo {
       position: absolute;
       left: 12px;
-      top: 8px;
+      top: 12px;
     }
 
     .github {
@@ -114,9 +114,9 @@ export default {
     }
   }
   .home-items {
-    width: 930px;
+    width: 820px;
     margin: 20px auto;
-
+    
     &:after {
       content: '\20';
       height: 0;
@@ -126,10 +126,12 @@ export default {
     }
   }
   .home-item {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     margin: 5px;
-    background-color: #2F333B;
+    background: url('~@/assets/logo.png') no-repeat center #2F333B;
+    background-blend-mode: soft-light;
+    background-size: 40%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #191A1E;
