@@ -151,6 +151,7 @@ export default {
       display: block;
       border-radius: 3px;
       pointer-events: none;
+      background-color: #000;
     }
 
     .thumb {
@@ -161,6 +162,7 @@ export default {
       height: 100%;
       z-index: 3;
       object-fit: cover;
+      background-color: #000;
     }
   }
 
