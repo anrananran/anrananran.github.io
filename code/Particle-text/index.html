@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle text (Canvas)</title>
+    <style>
+      body {
+        background: #003;
+        text-align: center;
+        font-family: 'trebuchet ms';
+      }
+
+      canvas {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -150px;
+        margin-left: -300px;
+      }
+
+      #gui {
+        background: rgba(0, 60, 60, 0.5);
+        padding: 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      }
+
+      label {
+        color: #0aa;
+        font-size: 11px;
+        max-width: 60px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      select {
+        background: rgba(0, 0, 0, 0.5);
+        color: #0ff;
+        border-radius: 7px;
+        border: 0;
+        padding: 2px;
+        font-size: 13px;
+      }
+
+      option {
+        background: #012;
+      }
+
+      .copy {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        color: #228;
+      }
+
+      a {
+        color: #259;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gui">
+      <label>effect</label>
+      <select id="effect">
+        <option value="0">none</option>
+        <option value="1">blur</option>
+        <option value="2">blink</option>
+        <option value="3">earthquake</option>
+      </select>
+
+      <label>global pulsation</label>
+      <select id="globalPulsation">
+        <option value="0">no</option>
+        <option value="1">yes</option>
+      </select>
+
+      <label>pulsation speed</label>
+      <select id="pulsationSpeed">
+        <option value="100">0.1 s</option>
+        <option value="250">0.25 s</option>
+        <option value="500" selected>0.5 s</option>
+        <option value="1000">1 s</option>
+        <option value="1500">1.5 s</option>
+      </select>
+
+      <label>radius</label>
+      <select id="particleRadius">
+        <option value="2">2</option>
+        <option value="5" selected>5</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+      </select>
+
+      <label>shapes</label>
+      <select id="shape">
+        <option value="0">circles</option>
+        <option value="1">rectangles</option>
+      </select>
+
+      <label>blending</label>
+      <select id="blending">
+        <option value="1" selected>yes</option>
+        <option value="0">no</option>
+      </select>
+      <button id="text">text</button>
+      <button id="link">link</button>
+    </div>
+    <canvas id="canvas" width="600" height="300"></canvas>
+
+    <div class="copy">
+      &copy; copystuff by <a href="http://rezoner.net">Rezoner</a> and
+      <a href="https://cssdeck.com">Rishabh</a> -
+      <a style="color:#835;" href="https://cssdeck.com/labs/db2o5oej/0">Compose your own effect</a>
+    </div>
+    <script src="../thumbs.js"></script>
+    <script src="../dat.gui.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
