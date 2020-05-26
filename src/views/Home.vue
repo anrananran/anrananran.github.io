@@ -51,7 +51,7 @@ export default {
     return {
       items: parseItems(items),
       curr: 1,
-      size: 4
+      size: 9
     }
   },
   computed: {
@@ -114,7 +114,7 @@ export default {
     }
   }
   .home-items {
-    width: 820px;
+    width: 930px;
     margin: 20px auto;
     
     &:after {
@@ -126,8 +126,8 @@ export default {
     }
   }
   .home-item {
-    width: 400px;
-    height: 250px;
+    width: 300px;
+    height: 200px;
     margin: 5px;
     background: url('~@/assets/logo.png') no-repeat center #2F333B;
     background-blend-mode: soft-light;
