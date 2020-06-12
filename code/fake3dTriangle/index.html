@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fake3dTriangle</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: #FFF;
+    }
+
+    p.count {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1.6rem;
+    }
+
+    canvas#canvas {
+      display: block;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">Canvas not supported.</canvas>
+  <p class="count" style="display: none;"><input type="range" id="range" min="1" max="36" step="1" value="12"></p>
+  <script src="../thumbs.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
