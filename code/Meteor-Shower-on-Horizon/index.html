@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meteor Shower on Horizon</title>
+    <style>
+      * {
+        font-family: 'arial black', Helvetica, verdana, monospace, sans-serif;
+        letter-spacing: 0.2rem;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      body {
+        position: relative;
+      }
+
+      canvas#canvas {
+        display: block;
+        background: #000;
+      }
+
+      #filter {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas">Canvas not supported.</canvas>
+    <div id="filter"></div>
+    <script src="../thumbs.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
