@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const emitter = walk('./code')
-const baseURL = 'https://anrananran.github.io'
+const baseURL = 'http://shen-bi.cn'
 const content = {
   items: []
 }
